@@ -238,10 +238,10 @@ body {
   font-weight: 700;
 }
 .skills li,
-.profile li,
-.work li {
+.profile li {
   border-bottom: none;
 }
+
 .profile {
   display: grid;
   gap: 0.8rem;
@@ -265,7 +265,9 @@ body {
   position: absolute;
   transition: width 2s ease-out;
 }
-
+.skills ul li:hover .porgress {
+  background: linear-gradient(to right, #62b982, #75acc7);
+}
 /* ---------------- */
 .aside-right {
   padding: 2rem 2rem 4rem 2rem;
@@ -298,7 +300,9 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.profile ul li:hover .ring-out {
+  background: linear-gradient(to right, #62b982, #75acc7);
+}
 .ring-in {
   width: 5.4rem;
   height: 5.4rem;
