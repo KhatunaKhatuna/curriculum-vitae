@@ -5,9 +5,11 @@
 To run this project locally:
 
 1. Clone or download this repo:
-   ```bash
-   git@github.com:KhatunaKhatuna/curriculum-vitae.git
-   ```
+
+```bash
+  git@github.com:KhatunaKhatuna/curriculum-vitae.git
+```
+
 2. Open the index.html file in any modern browser.
 
 Or use github live page link
