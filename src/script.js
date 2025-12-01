@@ -4,6 +4,7 @@ const ringInEls = document.querySelectorAll(".ring-in");
 const inputEl = document.querySelector(".input");
 const liEls = document.querySelectorAll(".marked-list ul li");
 // dark moud
+
 function loadMode() {
   const storedMode = JSON.parse(localStorage.getItem("mode"));
   if (storedMode !== null) {
@@ -33,16 +34,21 @@ loadMode();
 
 // progress bar
 const porgressEls = document.querySelectorAll(".porgress");
+const rings = document.querySelectorAll(".ring-progress");
 
-setInterval(() => {
-  increaseProgres(porgressEls);
-}, 500);
+function animateBar(bar) {
+  let progress = parseFloat(bar.dataset.progress);
+  let current = 0;
 
-function increaseProgres(elements) {
-  elements.forEach((bar) => {
-    let getWidth = parseFloat(bar.dataset.progress);
-    for (var i = 0; i < getWidth; i++) {
-      bar.style.width = i + "%";
+  let interval = setInterval(() => {
+    current++;
+    bar.style.setProperty("--p", current);
+
+    if (current >= progress) {
+      clearInterval(interval);
     }
-  });
+  }, 20);
 }
+
+porgressEls.forEach(animateBar);
+rings.forEach(animateBar);

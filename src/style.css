@@ -257,7 +257,8 @@ body {
   position: relative;
 }
 .porgress {
-  width: 0.1%; /*variable*/
+  --p: 0;
+  width: calc(var(--p) * 1%);
   height: 0.8rem;
   border-radius: 0.4rem;
   background: linear-gradient(to right, #84fab0, #8fd3f4);
@@ -265,23 +266,26 @@ body {
   transition: width 2s ease-out;
 }
 
+/* ---------------- */
 .aside-right {
   padding: 2rem 2rem 4rem 2rem;
   display: grid;
   gap: 4rem;
 }
 
-.about {
-  font-family: gotham-book;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 120%;
-}
+/*  */
 .escultures {
   display: none;
 }
 .logo {
   display: none;
+}
+/* profile */
+.about {
+  font-family: gotham-book;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 120%;
 }
 .ring-out,
 .ring-progress {
@@ -306,23 +310,15 @@ body {
   transform: translate(-50%, -50%);
 }
 .ring-progress {
-  --rp: 0;
+  --p: 0;
   rotate: 90deg;
   background: conic-gradient(
-    #9f9f9f00 0deg calc(var(--rp) * 1%),
-    #e0e0e0 calc(var(--rp) * 1%) 100%
+    #9f9f9f00 0deg calc(var(--p) * 1%),
+    #e0e0e0 calc(var(--p) * 1%) 100%
   );
-  animation: circleProgressBar 2s ease forwards;
+  transition: width 2s ease;
 }
 
-@keyframes circleProgressBar {
-  0% {
-    --rp: 0;
-  }
-  100% {
-    --rp: 70; /*variable*/
-  }
-}
 .ring-label {
   position: absolute;
   top: 50%;
@@ -342,6 +338,8 @@ body {
 .profile li {
   position: relative;
 }
+
+/* work/education */
 .marked-list-container {
   display: grid;
   gap: 1.6rem;
@@ -389,7 +387,6 @@ body {
     0% 100%,
     10.35634743875278% 50.499999999999986%
   );
-
   background: var(--dark);
   color: var(--light);
   padding: 5px 18px 5px 10px;
@@ -426,6 +423,7 @@ body {
 .container.dark .marked-list ul li:hover::before {
   background: linear-gradient(to right, #84fab0, #8fd3f4);
 }
+
 @media (min-width: 500px) {
   .main {
     display: grid;
@@ -511,6 +509,7 @@ input[type="checkbox"]:checked + .label {
   animation: toggleOn 0.4s linear forwards;
   background: var(--dark);
 }
+
 /* dark */
 .dark {
   background: var(--dark);
