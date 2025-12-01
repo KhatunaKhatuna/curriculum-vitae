@@ -7,7 +7,15 @@ const liEls = document.querySelectorAll(".marked-list ul li");
 
 function loadMode() {
   const storedMode = JSON.parse(localStorage.getItem("mode"));
-  if (storedMode !== null) {
+  if (storedMode === null) {
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    inputEl.checked = systemPrefersDark;
+    updateBody();
+    updateLocalStorage();
+  } else {
     inputEl.checked = storedMode;
     updateBody();
   }
@@ -21,13 +29,13 @@ function updateBody() {
   }
 }
 
-function updateLocaleStorage() {
+function updateLocalStorage() {
   localStorage.setItem("mode", JSON.stringify(inputEl.checked));
 }
 
 inputEl.addEventListener("input", () => {
   updateBody();
-  updateLocaleStorage();
+  updateLocalStorage();
 });
 
 loadMode();
