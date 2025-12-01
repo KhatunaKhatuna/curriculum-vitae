@@ -421,6 +421,47 @@ body {
 .container.dark .marked-list ul li:hover::before {
   background: linear-gradient(to right, #84fab0, #8fd3f4);
 }
+/* toggle */
+.toggle {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  rotate: 90deg;
+}
+.input {
+  visibility: hidden;
+}
+
+.label {
+  width: 4rem;
+  height: 2rem;
+  display: inline-block;
+
+  background-color: #9f9f9f1c;
+  border-radius: 20px;
+  position: relative;
+}
+.circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  cursor: pointer;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+input[type="checkbox"]:checked + .label {
+  background: var(--light);
+}
+
+.input:checked + .label .circle {
+  animation: toggleOn 0.4s linear forwards;
+  background: var(--dark);
+}
 
 @media (min-width: 500px) {
   .main {
@@ -465,47 +506,11 @@ body {
   .profile ul {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-/* toggle */
-.toggle {
-  position: absolute;
-  top: 3.5rem;
-  right: 3.5rem;
-}
-.input {
-  visibility: hidden;
-}
-
-.label {
-  width: 4rem;
-  height: 2rem;
-  display: inline-block;
-
-  background-color: #9f9f9f1c;
-  border-radius: 20px;
-  position: relative;
-}
-.circle {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
-
-  position: absolute;
-  top: 2.5px;
-  left: 2.5px;
-  cursor: pointer;
-  animation: toggleOff 0.4s linear forwards;
-}
-
-input[type="checkbox"]:checked + .label {
-  background: var(--light);
-}
-
-.input:checked + .label .circle {
-  animation: toggleOn 0.4s linear forwards;
-  background: var(--dark);
+  .toggle {
+    top: 3.5rem;
+    right: 3.5rem;
+    rotate: 0deg;
+  }
 }
 
 /* dark */
