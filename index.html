@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Curiculum Vitae</title>
   </head>
   <body>
@@ -24,6 +24,12 @@
         <div class="job">
           <span>web</span>
           <span>developer</span>
+        </div>
+        <div class="toggle">
+          <input type="checkbox" class="input" id="dark-mode" />
+          <label for="dark-mode" class="label">
+            <div class="circle"></div>
+          </label>
         </div>
       </header>
       <main class="main">
@@ -86,25 +92,25 @@
               <li>
                 <h4 class="therd-title">figma</h4>
                 <div class="skills-progress-bar">
-                  <div class="porgress"></div>
+                  <div class="porgress" data-progress="90"></div>
                 </div>
               </li>
               <li>
                 <h4 class="therd-title">JavaScript</h4>
                 <div class="skills-progress-bar">
-                  <div class="porgress"></div>
+                  <div class="porgress" data-progress="65"></div>
                 </div>
               </li>
               <li>
                 <h4 class="therd-title">tailwind</h4>
                 <div class="skills-progress-bar">
-                  <div class="porgress"></div>
+                  <div class="porgress" data-progress="70"></div>
                 </div>
               </li>
               <li>
                 <h4 class="therd-title">react</h4>
                 <div class="skills-progress-bar">
-                  <div class="porgress"></div>
+                  <div class="porgress" data-progress="80"></div>
                 </div>
               </li>
             </ul>
@@ -125,28 +131,28 @@
             <ul>
               <li>
                 <div class="ring-out">
-                  <div class="ring-progress"></div>
+                  <div class="ring-progress" data-progress="80"></div>
                   <div class="ring-in"></div>
                   <div class="ring-label">ui</div>
                 </div>
               </li>
               <li>
                 <div class="ring-out">
-                  <div class="ring-progress"></div>
+                  <div class="ring-progress" data-progress="80"></div>
                   <div class="ring-in"></div>
                   <div class="ring-label">ux</div>
                 </div>
               </li>
               <li>
                 <div class="ring-out">
-                  <div class="ring-progress"></div>
+                  <div class="ring-progress" data-progress="60"></div>
                   <div class="ring-in"></div>
                   <div class="ring-label">disign</div>
                 </div>
               </li>
               <li>
                 <div class="ring-out">
-                  <div class="ring-progress"></div>
+                  <div class="ring-progress" data-progress="80"></div>
                   <div class="ring-in"></div>
                   <div class="ring-label">ia</div>
                 </div>
@@ -158,7 +164,7 @@
             <div class="marked-list">
               <ul>
                 <li>
-                  <div class="year"><span>2023</span></div>
+                  <span class="year">2023</span>
                   <div>
                     <h3 class="secondery-title">Software Engineer</h3>
                     <p>Sakaeronavigatsia - Freelance</p>
@@ -182,7 +188,7 @@
             <div class="marked-list">
               <ul>
                 <li>
-                  <div class="year"><span>2023</span></div>
+                  <span class="year">2023</span>
                   <div>
                     <h3 class="secondery-title">Software Engineer</h3>
                     <p>Sakaeronavigatsia - Freelance</p>
@@ -200,6 +206,6 @@
         <img class="escultures" src="images/Escultures.svg" alt="Escultures" />
       </main>
     </div>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
