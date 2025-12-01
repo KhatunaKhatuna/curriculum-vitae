@@ -14,9 +14,7 @@ To run this project locally:
 
 Or use github live page link
 
-```bash
-  https://khatunakhatuna.github.io/curriculum-vitae/
-```
+<http://khatunakhatuna.github.io/curriculum-vitae/>
 
 ---
 
